@@ -1,0 +1,108 @@
+@use './../base/variables';
+@use './../base/mixins';
+
+footer {
+  .container{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  min-height: 100px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  .colums{
+    padding-top: 40px;
+  }
+}
+
+.footer-top {
+  input,button{
+    padding: 15px;
+    outline: 0;
+    border: 0;
+  }
+  form{
+    margin-top: 40px;
+    width: 90%;
+    position: relative;
+  }
+  input{
+    border-radius: 20px;
+    width: 100%;
+    padding-right: 115px;
+  }
+  button{
+    color: inherit;
+    background: linear-gradient(to bottom right, #009B95 , #FF3C13 );
+    position: absolute;
+    border-radius: 0 20px 20px 0;
+    right: 0;
+    width: 91px;
+  }
+  .number-phone{
+    font-size: 3.4rem;
+    color: red;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255),
+      -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+  }
+  background-color: variables.$primary;
+
+  .container {
+    padding-top: 54px;
+    padding-bottom: 34px;
+  }
+  p.heading {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+  p {
+    margin: 15px 0px;
+  }
+  li a {
+    line-height: 30px;
+  }
+
+  hr {
+    max-width: 80px;
+    margin: 0;
+  }
+
+  .qr-code {
+    display: flex;
+    gap: 5px;
+    padding: 22px 0px;
+
+    img {
+      height: 72px;
+    }
+  }
+}
+.footer-bottom{
+  background-color: variables.$primaryDark;
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    ul{
+    display: flex;
+      gap: 20px;
+    }
+  }
+}
+@include mixins.screen(lg) {
+  .footer-bottom .footer-content {
+    font-size: smaller;
+  }
+}
+@include mixins.screen(md) {
+  .footer-bottom  .footer-content>div:nth-child(1){
+    width: 100%;
+    text-align: center;
+  }
+.footer-bottom  .footer-content{
+flex-direction: column;
+justify-content: center;
+}
+}

@@ -1,0 +1,165 @@
+@use './../base/variables';
+@use './../base/mixins';
+body.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+  background-color: rgba(111, 111, 111, 0.9);
+}
+
+nav {
+  background-color: variables.$primaryDark;
+  height: 50px;
+  color: white;
+  z-index: 999;
+  .container{
+    margin-top: 0;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+
+    .action {
+      display: flex;
+      align-items: center;
+
+      .btn-action {
+        position: absolute;
+        top: 1;
+        right: calc(219px + 20px);
+
+        a {
+          display: inline-block;
+          line-height: 50px;
+          padding: 0px 10px;
+        }
+      }
+
+      button {
+        background-color: inherit;
+        outline: none;
+        border: 0;
+        padding: 0px 10px;
+      }
+    }
+
+    .user-info {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      i {
+        font-size: 1.8rem;
+        color: white;
+      }
+
+      a {
+        display: flex;
+        font-size: 1.4rem;
+        gap: 10px;
+      }
+    }
+  }
+
+  .menu {
+    font-size: 1.4rem;
+    display: flex;
+
+    a {
+      display: inline-block;
+      line-height: 50px;
+      padding: 0px 10px;
+      font-weight: 600;
+
+      &:hover {
+        background-color: variables.$primary;
+      }
+    }
+
+    li {
+      position: relative;
+      z-index: 999;
+      &:hover > .sub-menu {
+        display: block;
+      }
+    }
+  }
+
+  .sub-menu {
+    position: absolute;
+    background-color: variables.$primaryDark;
+    display: none;
+    top: 49px;
+
+    a {
+      width: 300px;
+    }
+  }
+
+  .sub-menu .sub-menu {
+    right: -300px;
+    top: 0px;
+  }
+}
+
+@include mixins.screen(xl) {
+  nav.navigation {
+    overscroll-behavior: contain;
+    overflow: hidden;
+    overflow-y: auto;
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    transform: translateX(-900px);
+    transition: transform 0.3s ease;
+    .container {
+      padding: 0;
+      margin: 0;
+    }
+
+    &.openMenu {
+      transform: translateX(0);
+    }
+    .menu {
+      flex-direction: column;
+      li {
+        border-bottom: 1px solid #ccc;
+        .sub-menu {
+          display: none;
+        }
+        .sub-menu.open {
+          background-color: #006b66;
+          display: block;
+        }
+        width: calc(400px - 30px);
+        align-items: center;
+        a {
+          width: 270px;
+        }
+
+        .toggle-submenu {
+          width: calc(400px - 30px - 278px);
+          display: inline-block;
+          text-align: end;
+          line-height: 50px;
+          padding: 0 15px;
+        }
+        .sub-menu {
+          position: static;
+        }
+      }
+    }
+    .nav .action {
+      .btn-action,
+      .user-info {
+        display: none;
+      }
+    }
+  }
+}
+
+// $container-max-widths: (
+//   sm: 100%,
+//   md: 540px,
+//   lg: 720px,
+//   xl: 960px,
+//   xxl: 1140px
+// );

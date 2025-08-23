@@ -1,0 +1,159 @@
+@use './base/reset';
+@use './base/defaul';
+@use './base/mixins';
+@use './base/variables';
+
+// Layout
+@use './layout/grid';
+
+// Pagesbanner
+@use './pages/home';
+@use './pages/about';
+@use './pages/Flight-List';
+@use './pages/Flight-info';
+
+// Components
+@use './components/header';
+@use './components/nav';
+@use './components/footer';
+@use './components/form_search';
+@use './components/input';
+
+// Common
+
+@include mixins.screen(xxl) {
+
+
+  body {
+    background-color: rgb(209, 152, 152);
+  }
+}
+@include mixins.screen(xl) {
+  body {
+    background-color: green;
+  }
+}
+@include mixins.screen(lg) {
+  body {
+    background-color: inherit;
+  }
+
+}
+@include mixins.screen(md) {
+  body {
+    background-color: red;
+  }
+}
+@include mixins.screen(sm) {
+  body {
+    background-color: yellow;
+  }
+
+}
+.d-flex{
+  display: flex;
+}
+.d-none{
+  display: none !important;
+}
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.container {
+  height: 100%;
+}
+.color-info {
+  color: variables.$info;
+}
+.color-dark {
+  color: variables.$primaryDark;
+}
+.color-primary {
+  color: variables.$primary;
+}
+.bg-info {
+  background-color: variables.$info;
+}
+.bg-dark {
+  background-color: variables.$primaryDark;
+}
+.bg-primary {
+  background-color: variables.$primary;
+}
+.btn-sm {
+  width: 96px;
+  height: 32px;
+  font-size: 1.4rem;
+}
+.btn-lg {
+  width: 96px;
+  height: 32px;
+  font-size: 1.4rem;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 0 20px 0;
+  // font-weight: bolder;
+  text-transform: uppercase;
+  color: white;
+}
+.btn-info {
+  background-color: variables.$info;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: variables.$primary;
+  }
+}
+.btn-primary {
+  background-color: variables.$primary;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: variables.$info;
+  }
+}
+// Cấu hình chiều cao mỗi dòng (nên đồng bộ với line-height thực tế)
+$line-height: 1.5rem;
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin min-lines($lines) {
+  line-height: $line-height;
+  min-height: $line-height * $lines;
+}
+
+// Clamp tối đa
+.max-1 {
+  @include line-clamp(1);
+}
+.max-2 {
+  @include line-clamp(2);
+}
+.max-3 {
+  @include line-clamp(3);
+}
+.max-4 {
+  @include line-clamp(4);
+}
+.max-5 {
+  @include line-clamp(5);
+}
+
+// Đặt chiều cao tối thiểu tương ứng số dòng
+.min-1 {
+  @include min-lines(1);
+}
+.min-2 {
+  @include min-lines(2);
+}
+.min-3 {
+  @include min-lines(3);
+}

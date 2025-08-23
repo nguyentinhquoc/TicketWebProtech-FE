@@ -1,0 +1,133 @@
+@use './../base/variables';
+@use './../base/mixins';
+
+.checkbox-custom {
+  gap: 10px;
+  .check-box-red-wrapper input {
+  display: none;
+}
+
+  .check-box-red-wrapper {
+    // display: inline-block;
+    flex-shrink: 0;
+    border: 2px solid variables.$info;
+    padding: 1px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .check-box-red {
+    border: 0;
+    // display: inline-block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+  .check-box-red-wrapper input:checked + .check-box-red {
+    background-color: rgb(232, 45, 45);
+  }
+}
+
+.form-custom {
+  position: relative;
+  width: 100%;
+
+  option {
+    line-height: 100px;
+  }
+
+  select {
+    padding: 10px;
+    font-size: 1.6rem;
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    outline: 1px solid #ccc;
+    color: variables.$primaryDark;
+    border: 0;
+  }
+
+  select + label {
+    top: 0;
+    font-weight: 600;
+    left: 20px;
+  }
+
+  input,
+  textarea {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    font-size: 1.2rem;
+    height: 60px;
+    padding: 0 15px;
+    outline: none;
+    border: none;
+    outline: 1px solid #ccc;
+    border-radius: 10px;
+    color: variables.$primaryDark;
+  }
+
+  input::placeholder {
+    color: transparent;
+    transition: 0.2s ease all;
+  }
+
+  textarea::placeholder {
+    color: transparent;
+    transition: 0.2s ease all;
+  }
+
+  textarea {
+    padding: 15px;
+  }
+
+  textarea + label {
+    top: 13%;
+  }
+
+  label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #999;
+    pointer-events: none;
+    // z-index: 999;
+    transition: 0.2s ease all;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0px 7px;
+    white-space: nowrap;
+  }
+
+  input:focus {
+    outline: 1px solid variables.$primary;
+  }
+
+  input:focus::placeholder {
+    color: #999;
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    font-weight: 600;
+    top: 0;
+    left: 10px;
+  }
+
+  textarea:focus {
+    outline: 1px solid variables.$primary;
+  }
+
+  textarea:focus::placeholder {
+    color: #999;
+  }
+
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label {
+    font-weight: 600;
+    top: 0;
+    left: 10px;
+  }
+}

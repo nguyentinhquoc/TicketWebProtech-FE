@@ -1,0 +1,256 @@
+@use "./../base/variables";
+@use "./../base/mixins";
+@use "./../layout/grid";
+
+.modal-form-search {
+  padding: 50px 0px;
+}
+
+.flight-info {
+  margin-bottom: 58px;
+
+  .heading {
+    h1 {
+      font-size: 2.4rem;
+      padding: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .info-detail {
+    .box {
+      padding: 20px;
+    }
+
+    box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    .box-info {
+      padding-bottom: 44px;
+      border-top: 1px solid #ccc;
+    }
+  }
+
+  background-color: #f7ffff;
+
+  .list-ticket-items {
+    .row {
+      width: 100%;
+
+      &>div {
+        margin-top: 7px;
+      }
+    }
+  }
+
+  .item-ticket+.item-ticket {
+    margin-top: 20px;
+  }
+
+  .item-ticket {
+    border-radius: 20px;
+    box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+    overflow: hidden;
+
+    .body-ticket {
+      padding: 15px;
+      background-color: #fff;
+    }
+
+    .heading-ticket {
+      line-height: 35px;
+      background-color: #fff6f4;
+      padding: 0 37px;
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    .airline-info {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      text-align: start;
+      justify-content: space-around;
+      display: flex;
+
+      .airline-name {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .name,
+      .code {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+      }
+    }
+
+    .flight-details {
+
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      .departure {
+        text-align: end;
+      }
+
+      .time-info {
+        .time {
+          font-size: 2.6rem;
+          color: variables.$primaryDark;
+          line-height: 24px;
+        }
+
+        .location {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          color: variables.$primary;
+        }
+
+        .date {
+          font-size: 1rem;
+          color: variables.$primary;
+        }
+
+        .arrow {
+          font-size: 2rem;
+          color: red;
+        }
+      }
+    }
+
+    .flight-meta {
+      display: flex;
+      font-size: 1.4rem;
+
+      div {
+        width: 50%;
+      }
+    }
+  }
+
+  section .box-container {
+    padding: 22px;
+    box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+    border-radius: 10px;
+  }
+
+  .baggage-infor {
+    .color-info {
+      text-align: center;
+      font-size: 1.6rem;
+    }
+
+    .box-container .color-dark {
+      // text-align: center;
+      font-size: 1.4rem;
+    }
+
+    .box-info {
+      border: 1.5px solid variables.$primary;
+      font-size: 1.2rem;
+      padding: 12px 23px;
+      border-radius: 10px;
+    }
+
+    .info-container {
+      align-items: center;
+    }
+  }
+
+  .passenger-infor {
+    .note {
+      padding: 10px;
+      margin-bottom: 20px;
+
+      h3 {
+        line-height: 40px;
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+
+  .info-passenger {
+    font-size: 1.6rem;
+    align-items: center;
+  }
+
+  .price-detail {
+    .price--detail__heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.6rem;
+      background-color: #fff6f4;
+      height: 50px;
+    }
+
+    .price--detail__list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .price-item {
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+
+      .price {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-left: 24px;
+        }
+      }
+    }
+
+    .price-total {
+      color: white;
+      background-color: variables.$primary;
+      height: 50px;
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .clause{
+    background-color: #FFF6F4;
+    .color-dark{
+      font-size: 1.2rem;
+    }
+  }
+  .btn-submit{
+    button{
+      margin: auto;
+      font-size: 2rem;
+      width: 200px;
+      height: 50px;
+      outline: none;
+      border: none;
+    }
+  }
+}

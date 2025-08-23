@@ -1,0 +1,447 @@
+@use './../base/variables';
+@use './../base/mixins';
+@use './../layout/grid';
+.modal-form-search {
+  padding: 50px 0px;
+}
+
+.flight-list {
+  margin-bottom: 58px;
+  .is-deposited {
+    background-color: #fff6f4;
+    box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    .airline-info {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      text-align: start;
+      justify-content: space-around;
+      display: flex;
+      .airline-name {
+        display: flex;
+        flex-direction: column;
+      }
+      .name,
+      .code {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+      }
+    }
+    .flight-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .time-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .time {
+          font-size: 2.4rem;
+          color: variables.$primaryDark;
+        }
+
+        .location {
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          color: variables.$primary;
+        }
+
+        .date {
+          font-size: 1.2rem;
+          color: variables.$primary;
+        }
+        .arrow {
+          font-size: 2rem;
+          color: red;
+        }
+      }
+    }
+    .flight-meta {
+      text-align: end;
+      font-size: 1.4rem;
+      .color-info {
+        font-size: 2.4rem;
+      }
+    }
+    .col-2{
+     display: flex;
+     flex-direction: column;
+     align-items: end;
+    }
+    .box-checked{
+      color: white;
+      background-color: variables.$info;
+      font-size: 1.2rem;
+      padding: 4px 12px;
+      width: fit-content;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .btn {
+      color: variables.$primaryDark;
+      border: 1px solid variables.$info;
+      padding: 4px 14px;
+      background: none;
+      font-size: 1.4rem;
+      transition: color 0.3s linear, background-color 0.3s linear;
+      &:hover {
+        background-color: variables.$info;
+        color: #fff;
+      }
+    }
+  }
+  .is-placing {
+    padding: 20px;
+    box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+    border-radius: 20px;
+    background-color: #f7ffff;
+    margin-bottom: 20px;
+    p {
+      text-transform: uppercase;
+    }
+    .color-info {
+      font-size: 2rem;
+    }
+    .color-dark {
+      font-size: 1.6rem;
+    }
+    .row {
+      align-items: center;
+    }
+    .btn {
+      color: variables.$primaryDark;
+      border: 1px solid variables.$info;
+      padding: 4px 14px;
+      background: none;
+      font-size: 1.4rem;
+      transition: color 0.3s linear, background-color 0.3s linear;
+      &:hover {
+        background-color: variables.$info;
+        color: #fff;
+      }
+    }
+  }
+  .heading {
+    h1 {
+      font-size: 2.4rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .session {
+    .filter {
+      padding: 20px;
+      box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+      .filter-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 1.4rem;
+          font-weight: 500;
+          div {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+          }
+          img {
+            width: 30px;
+          }
+        }
+        input {
+          min-width: 12px;
+          width: 12px;
+          height: 12px;
+          appearance: none;
+          border: 2px solid variables.$info;
+          border-radius: 4px;
+          cursor: pointer;
+          position: relative;
+          &:checked {
+            background-color: variables.$info;
+            border-color: variables.$info;
+          }
+        }
+      }
+      .heading {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          font-size: 1.6rem;
+        }
+      }
+      .box-filter {
+        padding-bottom: 44px;
+        border-top: 1px solid #ccc;
+      }
+    }
+    .list-ticket {
+      background-color: #f7ffff;
+      .list-ticket-items {
+        .info-ticket {
+          display: none;
+          padding: 16px;
+          background-color: #fff;
+          border-radius: 8px;
+          margin: 0 auto;
+          font-size: 1.4rem;
+          line-height: 1.5;
+          width: 100%;
+          h3 {
+            font-size: 1.6rem;
+            font-weight: bolder;
+            margin-bottom: 20px;
+          }
+          .ticket-section {
+            font-weight: 500;
+            margin-bottom: 24px;
+            // border-bottom: 1px dashed #f44336;
+            border-top: 1px dashed #f44336;
+            padding: 20px 0px;
+            .color-dark {
+              font-weight: bold;
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+          .col-6 {
+            // &.info,
+            &.price {
+              text-align: end;
+            }
+
+            &.info {
+              ul {
+                margin: 4px 0;
+                padding-left: 20px;
+                li {
+                  list-style: disc;
+                }
+              }
+            }
+
+            &.price {
+              text-align: right;
+
+              h3 {
+                font-size: 1.6rem;
+
+                .total-price {
+                  font-weight: bold;
+                  font-size: 18px;
+                }
+              }
+
+              table {
+                width: 100%;
+                margin-top: 8px;
+                border-collapse: collapse;
+
+                th,
+                td {
+                  padding: 4px;
+                  text-align: left;
+                  font-weight: 500;
+                }
+
+                th {
+                  font-size: 1.4rem;
+                }
+
+                td:last-child {
+                  text-align: right;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+
+          .conditions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px 16px;
+            margin-top: 8px;
+            li {
+              list-style: none;
+              position: relative;
+              padding-left: 12px;
+            }
+          }
+        }
+
+        .row {
+          width: 100%;
+          & > div {
+            margin-top: 7px;
+          }
+        }
+      }
+      .item-ticket {
+        margin-top: 20px;
+        padding: 15px;
+        box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+        min-height: 100px;
+        background-color: #fff;
+        border-radius: 20px;
+        .airline-info {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+          text-align: start;
+          justify-content: space-around;
+          display: flex;
+          .airline-name {
+            display: flex;
+            flex-direction: column;
+          }
+          .name,
+          .code {
+            text-transform: uppercase;
+            font-size: 1.4rem;
+          }
+        }
+        .flight-details {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .time-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .time {
+              font-size: 2.4rem;
+              color: variables.$primaryDark;
+            }
+
+            .location {
+              font-size: 1.6rem;
+              text-transform: uppercase;
+              color: variables.$primary;
+            }
+
+            .date {
+              font-size: 1.2rem;
+              color: variables.$primary;
+            }
+            .arrow {
+              font-size: 2rem;
+              color: red;
+            }
+          }
+        }
+        .flight-meta {
+          display: flex;
+          font-size: 1.4rem;
+          div {
+            width: 50%;
+          }
+        }
+        .info-price {
+          text-align: end;
+          .price {
+            font-size: 2.2rem;
+          }
+          .info {
+            font-size: 1.4rem;
+            font-weight: 400;
+          }
+        }
+        .btn-detail {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          button {
+            border-radius: 20px;
+            background-color: inherit;
+            border: 1px solid variables.$info;
+            font-size: 1.4rem;
+            padding: 5px 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+        }
+        .extras {
+          display: flex;
+          justify-content: space-around;
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+        }
+        .change-seat {
+          display: flex;
+          justify-content: end;
+          select {
+            color: variables.$primaryDark;
+            border-radius: 20px;
+            background-color: inherit;
+            border: 1px solid variables.$info;
+            font-size: 1.4rem;
+            padding: 5px 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+        }
+        .btn-booking {
+          align-items: center;
+          display: flex;
+          justify-content: end;
+          .btn {
+            width: 120px;
+            height: 40px;
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .list-action {
+        display: flex;
+        min-height: 100px;
+        label {
+          font-size: 1.4rem;
+          display: flex;
+          gap: 15px;
+          padding: 10px 20px;
+          background-color: #fff;
+          box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+          div:first-child {
+            display: flex;
+            flex-direction: column;
+          }
+          img {
+            width: 86px;
+          }
+        }
+        input:checked + label {
+          background-color: #f7ffff;
+          box-shadow: 0px 0px 0px 0px rgba(1, 1, 1, 0);
+        }
+      }
+    }
+  }
+}
+// @include mixins.screen(xxl) {
+//   body {
+//     background-color: rgb(209, 152, 152);
+//   }
+// }
+
