@@ -1,0 +1,60 @@
+@use './../base/variables';
+@use './../base/mixins';
+.steps {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  padding: 40px;
+  gap: 20px;
+  .row {
+    text-align: center;
+    justify-content: space-between;
+    color: variables.$primary;
+    align-items: center;
+  }
+
+  .step {
+    position: relative;
+    
+    color: variables.$primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-number {
+    font-size: 100px;
+    font-weight: bold;
+    color: rgba(255, 144, 122, 0.3);
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 0;
+    top: -28px;
+  }
+
+  .step-icon {
+    font-size: 30px;
+    margin-top: 10px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .step h3 {
+    max-width: 116px;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .step p {
+    max-width: 116px;
+    text-align: start;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    z-index: 1;
+    position: relative;
+  }
+}

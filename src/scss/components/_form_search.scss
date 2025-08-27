@@ -1,5 +1,5 @@
-@use './../base/variables';
-@use './../base/mixins';
+@use "./../base/variables";
+@use "./../base/mixins";
 
 // Model Style
 
@@ -158,14 +158,14 @@
       margin: 15px 0;
 
       .counter {
-        input[type='number']::-webkit-inner-spin-button,
-        input[type='number']::-webkit-outer-spin-button {
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
 
         /* Firefox */
-        input[type='number'] {
+        input[type="number"] {
           -moz-appearance: textfield;
         }
         #memberModal1,
@@ -237,7 +237,6 @@
 }
 // Form search container
 .form-search {
-
   .btn-remove {
     cursor: pointer;
   }
@@ -266,7 +265,10 @@
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
-    transition: opacity 0.5s ease, transform 0.5s ease, width 0.5s ease;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease,
+      width 0.5s ease;
 
     &.hidden {
       width: 0;
@@ -304,6 +306,7 @@
 
   // Button
   .btn-search {
+    padding: 20px;
     background-color: variables.$info;
     border: 0;
     width: 100%;
@@ -385,7 +388,7 @@
     border-radius: 10px;
     overflow: hidden;
     width: fit-content;
-
+    
     label {
       margin: 0;
       padding: 8px 14px;
@@ -399,6 +402,11 @@
       label {
         width: 100%;
         height: 100%;
+      }
+    }
+    @include mixins.screen(sm) {
+      label {
+        font-size: 1rem;
       }
     }
   }

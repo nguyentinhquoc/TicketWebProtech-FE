@@ -1,0 +1,116 @@
+@use "./../base/variables";
+@use "./../base/mixins";
+
+.ticket-list-items {
+  width: fit-content;
+  max-height: 850px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ticket-list {
+  .row {
+    align-items: center;
+  }
+  @include mixins.screen(lg) {
+    .note {
+      display: none;
+    }
+  }
+  .note {
+    color: variables.$info;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+  }
+  #tickets-list-items-gia-re {
+    display: none;
+  }
+
+  .ticket-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+
+    .airline {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .logo {
+      width: 30px;
+    }
+
+    .name {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .code {
+      @extend .name;
+    }
+
+    .infor,
+    .date {
+      font-size: 1.2rem;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.2rem;
+
+      .color-info {
+        font-size: 1.6rem;
+      }
+
+      .icon-ticket {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: variables.$primaryDark;
+      }
+    }
+  }
+
+  .btn-actions {
+    width: 100%;
+    display: flex;
+
+    img {
+      height: 24px;
+      display: inline;
+    }
+
+    .lable-right {
+      border-top-right-radius: 10px;
+    }
+
+    .lable-left {
+      border-top-left-radius: 10px;
+    }
+
+    label {
+      cursor: pointer;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 70px;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: inherit;
+      border: 0;
+      box-shadow: 0px 0px 16px 0px rgb(197, 192, 192);
+      transition: box-shadow 0.3s ease;
+    }
+
+    input[type="radio"]:checked + label {
+      box-shadow: 0px 0px 0px 0px rgb(197, 192, 192);
+    }
+  }
+}

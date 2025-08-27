@@ -1,0 +1,95 @@
+@use "./../base/variables";
+@use "./../base/mixins";
+@use "./../layout/grid";
+
+.banner {
+  width: 100%;
+  height: 650px;
+  background-image: url("./img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .form-search {
+    position: absolute;
+    top: 340px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+.box-faq {
+  background-color: #f7ffff;
+
+  .faq-item {
+    background: inherit;
+    border-bottom: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .faq-item:hover {
+    background: #f0fafa;
+  }
+
+  .faq-question {
+    color: variables.$primaryDark;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-answer {
+    font-size: 1.6rem;
+
+    color: variables.$primary;
+    display: none;
+    margin-top: 10px;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+
+  .arrow {
+    transition: transform 0.3s;
+  }
+
+  .faq-item.active .arrow {
+    transform: rotate(180deg);
+  }
+}
+.box-advice {
+  .row {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    padding: 25px;
+  }
+}
+
+@include mixins.screen(lg) {
+  .banner {
+    background-image: none;
+
+    .form-search {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+
+  .cheap-flights {
+    padding-top: 50px;
+  }
+}
+
+@include mixins.screen(sm) {
+  main .container {
+    width: 95%;
+  }
+}

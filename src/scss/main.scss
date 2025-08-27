@@ -1,29 +1,37 @@
-@use './base/reset';
-@use './base/defaul';
-@use './base/mixins';
-@use './base/variables';
+@use "./base/reset";
+@use "./base/defaul";
+@use "./base/mixins";
+@use "./base/variables";
 
 // Layout
-@use './layout/grid';
+@use "./layout/grid";
 
 // Pagesbanner
-@use './pages/home';
-@use './pages/about';
-@use './pages/Flight-List';
-@use './pages/Flight-info';
+@use "./pages/home";
+@use "./pages/flight";
+@use "./pages/about";
+@use "./pages/Flight-List";
+@use "./pages/Flight-info";
 
 // Components
-@use './components/header';
-@use './components/nav';
-@use './components/footer';
-@use './components/form_search';
-@use './components/input';
+@use "./components/header";
+@use "./components/nav";
+@use "./components/footer";
+@use "./components/form_search";
+@use "./components/input";
+@use "./components/cardItems/card1.scss";
+@use "./components/cardItems/card2.scss";
+@use "./components/cardItems/card3.scss";
+@use "./components/step";
+@use "./components/list_provider";
+@use "./components/ticket_list";
 
 // Common
-
+.prev,
+.next {
+  cursor: pointer;
+}
 @include mixins.screen(xxl) {
-
-
   body {
     background-color: rgb(209, 152, 152);
   }
@@ -37,7 +45,6 @@
   body {
     background-color: inherit;
   }
-
 }
 @include mixins.screen(md) {
   body {
@@ -48,16 +55,15 @@
   body {
     background-color: yellow;
   }
-
 }
-.d-flex{
+.d-flex {
   display: flex;
 }
-.d-none{
+.d-none {
   display: none !important;
 }
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 .container {
@@ -114,9 +120,34 @@
     background-color: variables.$info;
   }
 }
+.container {
+  & > .heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 26px;
+      font-weight: 600;
+      color: variables.$primary;
+      font-size: 1.6rem;
+    }
+  }
+}
 // Cấu hình chiều cao mỗi dòng (nên đồng bộ với line-height thực tế)
 $line-height: 1.5rem;
-
 @mixin line-clamp($lines) {
   display: -webkit-box;
   -webkit-line-clamp: $lines;
@@ -146,6 +177,9 @@ $line-height: 1.5rem;
 .max-5 {
   @include line-clamp(5);
 }
+.max-6 {
+  @include line-clamp(6);
+}
 
 // Đặt chiều cao tối thiểu tương ứng số dòng
 .min-1 {
@@ -156,4 +190,7 @@ $line-height: 1.5rem;
 }
 .min-3 {
   @include min-lines(3);
+}
+.min-6 {
+  @include min-lines(6);
 }

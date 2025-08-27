@@ -1,11 +1,11 @@
-@use './../base/variables';
-@use './../base/mixins';
-@use './../layout/grid';
+@use "./../base/variables";
+@use "./../base/mixins";
+@use "./../layout/grid";
 
 .banner {
   width: 100%;
-  height: 578px;
-  background-image: url('./img/banner.png');
+  height: 650px;
+  background-image: url("./img/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -19,167 +19,6 @@
 }
 
 .cheap-flights {
-  .heading {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 36px;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    h2 {
-      font-size: 2.4rem;
-      font-weight: bold;
-    }
-
-    p {
-      font-size: 1.6rem;
-    }
-
-    ul {
-      display: flex;
-      gap: 26px;
-      font-weight: 600;
-      color: variables.$primary;
-      font-size: 1.6rem;
-    }
-  }
-
-  .col-3 > .item {
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-    position: relative;
-    min-height: 100px;
-    height: 100%;
-
-    img {
-      border-radius: 10px 10px 0 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .img {
-      height: 40%;
-    }
-
-    .info-img {
-      position: absolute;
-      top: 0;
-      height: calc(180px - 40px);
-      color: #fff;
-      margin: 20px;
-      display: flex;
-      justify-content: end;
-      flex-direction: column;
-    }
-
-    .sale {
-      position: absolute;
-      background-color: variables.$info;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      right: 0;
-      top: 0;
-      padding: 5px 12px;
-      display: inline-block;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    .info-content-img {
-      max-width: 100%;
-      font-weight: 600;
-    }
-
-    h3 {
-      font-size: 1.8rem;
-    }
-
-    .date {
-      font-size: 1.2rem;
-      line-height: 20px;
-    }
-
-    .item-content {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding: 20px;
-      height: 60%;
-      justify-content: space-between;
-
-      .route {
-        font-size: 1.4rem;
-        font-weight: bold;
-      }
-
-      .info-row {
-        display: flex;
-        justify-content: space-between;
-
-        .type-plane img {
-          width: 1.4rem;
-          height: 1.4rem;
-          display: inline;
-        }
-
-        .type-plane {
-          width: 35%;
-
-          p {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            font-weight: bold;
-          }
-        }
-      }
-
-      .rating {
-        display: flex;
-        flex-direction: column;
-
-        .stars {
-          color: #dc9d1f;
-          font-size: 1.4rem;
-        }
-
-        .count {
-          font-weight: bold;
-          text-align: end;
-        }
-      }
-
-      .description {
-        font-weight: bold;
-        font-size: 1.2rem;
-        line-height: 2rem;
-      }
-
-      .footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .current {
-          font-weight: bold;
-          font-size: 1.6rem;
-          text-align: end;
-        }
-
-        .old {
-          font-size: 1.2rem;
-          text-decoration: line-through;
-          text-align: end;
-          width: 100%;
-          display: inline-block;
-        }
-      }
-    }
-  }
-
   .col-6 {
     .item {
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
@@ -321,104 +160,7 @@
 }
 
 .box-news-layout {
-  .ticket-list-items {
-    height: 850px;
-    overflow-y: auto;
-  }
-
-  .ticket-list {
-    #tickets-list-items-gia-re {
-      display: none;
-    }
-
-    .ticket-item {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding: 20px;
-      border-bottom: 1px solid #ccc;
-
-      .airline {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-      }
-
-      .logo {
-        width: 30px;
-      }
-
-      .name {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-      }
-
-      .code {
-        @extend .name;
-      }
-
-      .infor,
-      .date {
-        font-size: 1.2rem;
-      }
-
-      .price {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 1.2rem;
-
-        .color-info {
-          font-size: 1.6rem;
-        }
-
-        .icon-ticket {
-          width: 1.2rem;
-          height: 1.2rem;
-          color: variables.$primaryDark;
-        }
-      }
-    }
-
-    .btn-actions {
-      width: 100%;
-      display: flex;
-
-      img {
-        height: 24px;
-        display: inline;
-      }
-
-      .lable-right {
-        border-top-right-radius: 10px;
-      }
-
-      .lable-left {
-        border-top-left-radius: 10px;
-      }
-
-      label {
-        cursor: pointer;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-        height: 70px;
-        font-size: 24px;
-        font-weight: bold;
-        text-transform: uppercase;
-        background-color: inherit;
-        border: 0;
-        box-shadow: 0px 0px 16px 0px rgb(197, 192, 192);
-        transition: box-shadow 0.3s ease;
-      }
-
-      input[type='radio']:checked + label {
-        box-shadow: 0px 0px 0px 0px rgb(197, 192, 192);
-      }
-    }
-  }
+  
 
   .sale {
     background-color: #f44336;
@@ -513,6 +255,7 @@
       }
       .col-4,
       .col-8 {
+        min-height: 150px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -543,9 +286,8 @@
   }
   .hotel,
   .news {
-    .item{
-     height: 180px;
-     overflow: hidden;
+    .item {
+      overflow: hidden;
     }
     .heading {
       margin-bottom: 30px;
@@ -578,6 +320,54 @@
     }
   }
 }
+
+.booking-banner {
+  @include mixins.screen(lg) {
+    .row {
+      text-align: center;
+      padding: 20px 25px;
+    }
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+    }
+    a {
+      margin: auto;
+    }
+  }
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .row {
+    border-radius: 10px;
+    width: 100%;
+    min-height: 150px;
+    background: linear-gradient(to bottom, #01b5b6 0%, #004d4a 69%, #ff3c13 100%);
+    padding: 20px 65px;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .heading {
+    font-size: 2.6rem;
+  }
+  .description {
+    font-size: 1.6rem;
+  }
+  a {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+}
+
 
 @include mixins.screen(lg) {
   .banner {

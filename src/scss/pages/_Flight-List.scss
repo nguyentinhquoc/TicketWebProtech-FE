@@ -1,6 +1,6 @@
-@use './../base/variables';
-@use './../base/mixins';
-@use './../layout/grid';
+@use "./../base/variables";
+@use "./../base/mixins";
+@use "./../layout/grid";
 .modal-form-search {
   padding: 50px 0px;
 }
@@ -69,12 +69,12 @@
         font-size: 2.4rem;
       }
     }
-    .col-2{
-     display: flex;
-     flex-direction: column;
-     align-items: end;
+    .col-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
     }
-    .box-checked{
+    .box-checked {
       color: white;
       background-color: variables.$info;
       font-size: 1.2rem;
@@ -89,7 +89,9 @@
       padding: 4px 14px;
       background: none;
       font-size: 1.4rem;
-      transition: color 0.3s linear, background-color 0.3s linear;
+      transition:
+        color 0.3s linear,
+        background-color 0.3s linear;
       &:hover {
         background-color: variables.$info;
         color: #fff;
@@ -120,7 +122,9 @@
       padding: 4px 14px;
       background: none;
       font-size: 1.4rem;
-      transition: color 0.3s linear, background-color 0.3s linear;
+      transition:
+        color 0.3s linear,
+        background-color 0.3s linear;
       &:hover {
         background-color: variables.$info;
         color: #fff;
@@ -128,6 +132,13 @@
     }
   }
   .heading {
+    #openModelFilter {
+      gap: 10px;
+      display: none;
+    }
+    .row {
+      justify-content: space-between;
+    }
     h1 {
       font-size: 2.4rem;
     }
@@ -135,6 +146,7 @@
       font-size: 1.2rem;
     }
   }
+
   .session {
     .filter {
       padding: 20px;
@@ -289,6 +301,13 @@
             margin-top: 7px;
           }
         }
+        @include mixins.screen(lg) {
+          .item-ticket{
+            .airline-info{
+              display: block;
+            }
+          }
+        }
       }
       .item-ticket {
         margin-top: 20px;
@@ -340,6 +359,12 @@
               font-size: 1.2rem;
               color: variables.$primary;
             }
+            .arrow-item{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
             .arrow {
               font-size: 2rem;
               color: red;
@@ -349,9 +374,6 @@
         .flight-meta {
           display: flex;
           font-size: 1.4rem;
-          div {
-            width: 50%;
-          }
         }
         .info-price {
           text-align: end;
@@ -439,9 +461,30 @@
     }
   }
 }
-// @include mixins.screen(xxl) {
-//   body {
-//     background-color: rgb(209, 152, 152);
-//   }
-// }
-
+@include mixins.screen(xxl) {
+  #ModalFilter {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* màu nền mờ */
+    font-size: 2rem;
+  }
+  .flight-list .heading #openModelFilter {
+    display: flex;
+  }
+  /* Nội dung modal */
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* canh giữa */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+}
