@@ -56,12 +56,18 @@
           font-size: 1.2rem;
           color: variables.$primary;
         }
+        .arrow-item {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        }
         .arrow {
           font-size: 2rem;
           color: red;
         }
       }
     }
+
     .flight-meta {
       text-align: end;
       font-size: 1.4rem;
@@ -69,6 +75,7 @@
         font-size: 2.4rem;
       }
     }
+
     .col-2 {
       display: flex;
       flex-direction: column;
@@ -95,6 +102,45 @@
       &:hover {
         background-color: variables.$info;
         color: #fff;
+      }
+    }
+    @include mixins.screen(lg) {
+      .line {
+        display: flex;
+        border: 1px dashed variables.$info;
+        margin: 10px 0px;
+      }
+
+      .btn {
+        margin-top: 10px;
+        padding: 8px 20px;
+        font-size: 1.2rem;
+      }
+    }
+    @include mixins.screen(md) {
+      .airline-info {
+        .name,
+        .code {
+          text-transform: uppercase;
+          font-size: 1rem;
+        }
+      }.flight-details{
+        .time-info{
+          .time{
+            font-size: 2rem;
+          }.location{
+            font-size: 1.4rem;
+          }.date{
+            font-size: 1rem;
+          }
+        }
+
+      }.flight-meta{
+        .color-dark{
+          font-size: 1.2rem;
+        }.color-info{
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -217,7 +263,49 @@
             font-weight: bolder;
             margin-bottom: 20px;
           }
+          .ticket-types {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            .row {
+              width: 100%;
+              align-items: center;
+              justify-content: space-between;
+              border-radius: 10px;
+              .col {
+                margin: 10px 0px;
+              }
+            }
+            label {
+              display: block;
+              cursor: pointer;
+              border-radius: 10px;
+              box-shadow:
+                rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+              text-align: center;
+              padding: 20px;
+              transition: all 0.5s ease;
+            }
+
+            @include mixins.screen(md) {
+              label {
+                padding: 10px;
+                font-size: 1rem;
+              }
+            }
+
+            input:checked + label {
+              background-color: variables.$primary;
+              color: #fff;
+            }
+          }
+
           .ticket-section {
+            p,
+            li {
+              line-height: 2;
+            }
             font-weight: 500;
             margin-bottom: 24px;
             // border-bottom: 1px dashed #f44336;
@@ -228,6 +316,17 @@
             }
             &:last-child {
               border-bottom: none;
+            }
+          }
+          @include mixins.screen(md) {
+            .ticket-section {
+              h3 {
+                font-size: 1.2rem;
+              }
+              p,
+              li {
+                font-size: 1rem;
+              }
             }
           }
           .col-6 {
@@ -251,10 +350,20 @@
 
               h3 {
                 font-size: 1.6rem;
-
                 .total-price {
                   font-weight: bold;
-                  font-size: 18px;
+                  font-size: 1.8rem;
+                }
+              }
+              @include mixins.screen(md) {
+                h3 {
+                  border-top: 1px dashed variables.$info;
+                  padding-top: 12px;
+                  font-size: 1.2rem;
+                  .total-price {
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                  }
                 }
               }
 
@@ -279,6 +388,18 @@
                   font-weight: bold;
                 }
               }
+              @include mixins.screen(md) {
+                table {
+                  width: 100%;
+                  td {
+                    font-size: 1rem;
+                  }
+                  th {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                  }
+                }
+              }
             }
           }
 
@@ -293,19 +414,21 @@
               padding-left: 12px;
             }
           }
+
+          @include mixins.screen(md) {
+            .conditions {
+              grid-template-columns: repeat(1, 1fr);
+              li {
+                font-size: 1rem;
+              }
+            }
+          }
         }
 
         .row {
           width: 100%;
           & > div {
             margin-top: 7px;
-          }
-        }
-        @include mixins.screen(lg) {
-          .item-ticket{
-            .airline-info{
-              display: block;
-            }
           }
         }
       }
@@ -316,7 +439,8 @@
         min-height: 100px;
         background-color: #fff;
         border-radius: 20px;
-        .airline-info {
+        .airline-info,
+        .airline-info-mobile {
           img {
             width: 40px;
             height: 40px;
@@ -359,11 +483,12 @@
               font-size: 1.2rem;
               color: variables.$primary;
             }
-            .arrow-item{
+            .arrow-item {
               display: flex;
               flex-direction: column;
               justify-content: center;
               align-items: center;
+              text-align: center;
             }
             .arrow {
               font-size: 2rem;
@@ -386,6 +511,16 @@
           }
         }
         .btn-detail {
+          &.mobile {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            .color-dark.toggle-info {
+              font-size: 0.8rem;
+              padding: 2px 10px;
+              margin-bottom: 10px;
+            }
+          }
           display: flex;
           align-items: center;
           justify-content: center;
@@ -435,27 +570,76 @@
           }
         }
       }
+      @include mixins.screen(lg) {
+        .item-ticket {
+          .line-decor {
+            // height: 1px;
+            margin: 10px;
+            border-bottom: 1px dashed variables.$primary;
+          }
+          .row {
+            align-items: center;
+          }
+          .airline-info-mobile {
+            display: block;
+            display: flex;
+            gap: 2px;
+          }
+          .airline-info {
+            // display: none;
+            gap: 2px;
+          }
+        }
+      }
+      @include mixins.screen(sm) {
+        .item-ticket {
+          .info-price {
+            .price {
+              font-size: 1.6rem;
+            }
+            .info {
+              font-size: 1rem;
+            }
+          }
+
+          .flight-details .time-info {
+            .time {
+              font-size: 1.6rem;
+            }
+            .arrow-item {
+              .arrow {
+                font-size: 1.5rem;
+              }
+            }
+          }
+          .btn-booking {
+            font-size: 10px;
+          }
+        }
+      }
       .list-action {
         display: flex;
         min-height: 100px;
-        label {
+        .date {
           font-size: 1.4rem;
           display: flex;
-          gap: 15px;
+          flex-direction: column;
+          align-items: center;
           padding: 10px 20px;
           background-color: #fff;
           box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
-          div:first-child {
-            display: flex;
-            flex-direction: column;
-          }
           img {
             width: 86px;
           }
-        }
-        input:checked + label {
-          background-color: #f7ffff;
-          box-shadow: 0px 0px 0px 0px rgba(1, 1, 1, 0);
+          &.active {
+            background-color: variables.$primary;
+            .color-dark {
+              color: #fff;
+            }
+            .color-primary {
+              color: #fff;
+            }
+          }
         }
       }
     }
@@ -474,8 +658,12 @@
     background-color: rgba(0, 0, 0, 0.5); /* màu nền mờ */
     font-size: 2rem;
   }
-  .flight-list .heading #openModelFilter {
+  #openModelFilter {
     display: flex;
+    align-items: center;
+    text-align: end;
+    width: fit-content;
+    margin-left: auto;
   }
   /* Nội dung modal */
   .modal-content {

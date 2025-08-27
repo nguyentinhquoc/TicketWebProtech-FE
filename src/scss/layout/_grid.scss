@@ -2,6 +2,13 @@
 @use 'sass:math';
 @use './../base/variables';
 
+.d-flex {
+  display: flex;
+}
+.d-none {
+  display: none !important;
+}
+
 $container-max-widths: (
   sm: 100%,
   md: 540px,
@@ -128,5 +135,16 @@ $gutters: (
     @include make-offsets($infix);
 
     @include make-gutters($infix);
+  }
+}
+
+@each $breakpoint, $value in variables.$grid-breakpoints {
+    @include make-media-query($value) {
+    .d-none-#{$breakpoint} {
+      display: none !important;
+    }
+    .d-block-#{$breakpoint} {
+      display: block !important;
+    }
   }
 }
