@@ -50,10 +50,7 @@
   .list-ticket-items {
     .row {
       width: 100%;
-
-      &>div {
-        margin-top: 7px;
-      }
+      justify-content: space-between;
     }
   }
 
@@ -69,12 +66,32 @@
     .body-ticket {
       padding: 15px;
       background-color: #fff;
+      @include mixins.screen(lg) {
+        .type-ticket{
+          width: 100%;
+        }
+      }
+      @include mixins.screen(md) {
+        .type-ticket{
+          .type{
+            font-size: 1.4rem;
+            color: #fff;
+            background-color: variables.$info;
+            padding: 4px 24px;
+            width: fit-content;
+            margin-left: auto;
+            border-radius: 20px;
+          margin-top: auto;
+            box-shadow: 0 4px 16px 0 rgba(0,0,0,0.15);
+          }
+        }
+      }
     }
 
     .heading-ticket {
-      line-height: 35px;
+      min-height: 35px;
       background-color: #fff6f4;
-      padding: 0 37px;
+      padding: 10px 37px;
 
       p {
         font-size: 1.4rem;
@@ -86,9 +103,9 @@
         width: 40px;
         height: 40px;
       }
+      gap: 10px;
 
       text-align: start;
-      justify-content: space-around;
       display: flex;
 
       .airline-name {
@@ -131,6 +148,9 @@
         }
 
         .arrow {
+          align-items: center;
+          display: flex;
+          justify-content: center;
           font-size: 2rem;
           color: red;
         }
@@ -170,9 +190,15 @@
       padding: 12px 23px;
       border-radius: 10px;
     }
+  
 
     .info-container {
       align-items: center;
+    }
+    @include mixins.screen(md) {
+      .info-container>p{
+        width: 100%;
+      }
     }
   }
 
