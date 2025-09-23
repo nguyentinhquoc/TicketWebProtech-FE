@@ -10,6 +10,8 @@
   margin-bottom: 58px;
 
   .heading {
+    margin-bottom: 28px;
+
     h1 {
       font-size: 2.4rem;
       padding: 0;
@@ -190,7 +192,6 @@
     }
   }
 
-
   .info-passenger {
     font-size: 1.6rem;
     align-items: center;
@@ -237,14 +238,17 @@
       align-items: center;
     }
   }
-  .clause{
-    background-color: #FFF6F4;
-    .color-dark{
+
+  .clause {
+    background-color: #fff6f4;
+
+    .color-dark {
       font-size: 1.2rem;
     }
   }
-  .btn-submit{
-    button{
+
+  .btn-submit {
+    button {
       margin: auto;
       font-size: 2rem;
       width: 200px;

@@ -22,7 +22,7 @@
 <body>
   <%- include("./partials/header.ejs") %> <%- include("./partials/nav.ejs") %>
       <!-- FORM SEARCH -->
-      <div class="banner">
+      <div class="banner" style="background-image: url('/Content/img/banner.png')">
         <!-- FORM SEARCH -->
         <div class="modal-form-search">
           <form class="form-search" method="get">
@@ -42,17 +42,19 @@
                   <div class="col-3 col-xl-4 col-lg-12">
                     <div class="row">
                       <div class="col-6">
-                        <select name id>
-                          <option value>Chon chuyến bay</option>
-                          <option value>option 1</option>
-                          <option value>option 2</option>
+                        <select id="seatClass" name="seatClass" class="form-control">
+                          <option value="">Tất cả hạng ghế</option>
+                          <option value="economy">Phổ thông</option>
+                          <option value="business">Thương gia</option>
+                          <option value="first">Hạng nhất</option>
                         </select>
                       </div>
                       <div class="col-6">
-                        <select name id>
-                          <option value>Chon chuyến bay</option>
-                          <option value>option 1</option>
-                          <option value>option 2</option>
+                        <select id="airline" name="airline" class="form-control">
+                          <option value="">Tất cả hãng bay</option>
+                          <option value="VJ">VietJet Air</option>
+                          <option value="VN">Vietnam Airlines</option>
+                          <option value="QH">Bamboo Airways</option>
                         </select>
                       </div>
                     </div>

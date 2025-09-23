@@ -31,31 +31,31 @@
 .next {
   cursor: pointer;
 }
-// @include mixins.screen(xxl) {
-//   body {
-//     background-color: rgb(209, 152, 152);
-//   }
-// }
-// @include mixins.screen(xl) {
-//   body {
-//     background-color: green;
-//   }
-// }
-// @include mixins.screen(lg) {
-//   body {
-//     background-color: inherit;
-//   }
-// }
-// @include mixins.screen(md) {
-//   body {
-//     background-color: red;
-//   }
-// }
-// @include mixins.screen(sm) {
-//   body {
-//     background-color: yellow;
-//   }
-// }
+@include mixins.screen(xxl) {
+  body {
+    background-color: rgb(209, 152, 152);
+  }
+}
+@include mixins.screen(xl) {
+  body {
+    background-color: green;
+  }
+}
+@include mixins.screen(lg) {
+  body {
+    background-color: inherit;
+  }
+}
+@include mixins.screen(md) {
+  body {
+    background-color: red;
+  }
+}
+@include mixins.screen(sm) {
+  body {
+    background-color: yellow;
+  }
+}
 
 * {
   font-family: "Montserrat", sans-serif;

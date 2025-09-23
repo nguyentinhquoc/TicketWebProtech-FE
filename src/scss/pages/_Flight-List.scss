@@ -7,6 +7,14 @@
 
 .flight-list {
   margin-bottom: 58px;
+   .heading-waytype{
+    background-color: variables.$primary;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+   }
   .is-deposited {
     background-color: #fff6f4;
     box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
@@ -14,6 +22,7 @@
     margin-bottom: 20px;
     padding: 15px 30px;
     .airline-info {
+      
       img {
         width: 40px;
         height: 40px;
@@ -433,12 +442,15 @@
         }
       }
       .item-ticket {
-        margin-top: 20px;
+        margin-top: 7px;
         padding: 15px;
-        box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+        box-shadow: 1px 1px 12px 3px rgba(214, 214, 214, 0.25);
         min-height: 100px;
         background-color: #fff;
         border-radius: 20px;
+        .airline-info{
+          margin-left: 20px;
+        }
         .airline-info,
         .airline-info-mobile {
           img {
@@ -446,7 +458,8 @@
             height: 40px;
           }
           text-align: start;
-          justify-content: space-around;
+          gap: 10px;
+          // justify-content: space-around;
           display: flex;
           .airline-name {
             display: flex;
