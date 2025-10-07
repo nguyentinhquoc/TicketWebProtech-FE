@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon-icon-DRcyrWuX.ico" />
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script type="module"  src="./assets/main-C1PZjzlc.js"></script>
+  <link rel="stylesheet"  href="./assets/main-CNiOkohg.css">
+</head>
+
+<body>
+  <!-- <img src="./../public/img/banner.png" alt /> -->
+  <header>
+    <div class="header">
+      <div class="logo">
+        <img src="./svg/logo.svg" alt="Logo">
+      </div>
+      <div class="action">
+        <span onclick="openMenu()" for="check-menu" class="openMenu">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+        <div class="btn-action">
+          <button><img src="./svg/header/search.svg" alt></button>
+          <button><img src="./svg/header/bell.svg" alt></button>
+          <button><img src="./svg/header/ticket.svg" alt></button>
+        </div>
+        <div class="user-info">
+          <img src="./svg/header/user.svg" alt>
+          <!-- <button><i class="fa-solid fa-bars"></i></button> -->
+        </div>
+        <img class="ticket" src="./svg/header/ticket-header.svg" alt>
+      </div>
+  </div>
+  <div>
+    <button id="backToTop" class="back-to-top">
+      ↑
+    </button>
+
+  </div>
+</header> <nav class="navigation">
+  <div class="container">
+    <div class="nav">
+      <ul class="menu">
+        <li><a href="3">khách sạn</a></li>
+        <li><a href="3">Tour</a></li>
+        <li>
+          <a href="3">Vé máy bay</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="/123">máy bay</a>
+              <ul class="sub-menu">
+                <li><a href="/123">máy </a></li>
+                <li><a href="/123">máy bay</a></li>
+                <li><a href="/123">máy bay</a></li>
+              </ul>
+            </li>
+            <li><a href="/123">máy bay</a></li>
+            <li><a href="/123">máy bay</a>
+              <ul class="sub-menu">
+                <li><a href="/123">máy bsssss bsssss bsssss bsssss </a></li>
+                <li><a href="/123">máy bay</a></li>
+                <li><a href="/123">máy bay</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="3">khách sạn</a></li>
+        <li><a href="3">Tour</a></li>
+        <li><a href="3">Tour</a></li>
+        <li><a href="3">Tour</a></li>
+
+      </ul>
+      <div class="action">
+        <div class="btn-action">
+          <a><img src="./svg/header/facebook.svg" alt /></a>
+          <a><img src="./svg/header/mess.svg" alt /></a>
+        </div>
+        <div class="user-info">
+          <a href="tel:0919005320"><img src="./svg/header/phone.svg" alt />
+            0919005320
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+      <main class="flight-payment">
+        <div class="heading">
+          <div class="container">
+            <h1 class="color-dark">THÔNG TIN THANH TOÁN</h1>
+            <p class="color-primary">
+              Quý khách vui lòng kiểm tra lại thông tin đặt vé và thanh toán đầy đủ.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row box-all">
+            <div class="col-9 col-xxl-12">
+              <section>
+                <div class="list-ticket-items">
+                  <div class="item-ticket">
+                    <div class="heading-ticket">
+                      <div class="row row-cols-md-1">
+                        <div class="col-6">
+                          <p class="color-dark">Chiều đi: Hà Nội - Hồ Chí Minh</p>
+                        </div>
+                        <div class="col-6">
+                          <p class="color-dark">Ngày: 06/02/2023</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="body-ticket">
+                      <div class="row g-1">
+                        <div class="col-3 d-none-md">
+                          <div class="airline-info">
+                            <img src="./img/home/image-log-bamboo.png" alt="logo" />
+                            <div class="airline-name">
+                              <span class="color-dark name">VIETJET AIR</span>
+                              <span class="color-info code">VJ2051 - A320</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 col-lg-7 col-md-12">
+                          <div class="flight-details">
+                            <div class="time-info">
+                              <div class="row">
+                                <div class="col-5">
+                                  <div class="departure">
+                                    <div class="row g-1">
+                                      <div class="col-7">
+                                        <div class="date d-none-lg">
+                                          Thứ 5 <br />
+                                          05-04/22
+                                        </div>
+                                      </div>
+                                      <div class="col-5">
+                                        <div class="time">17:15</div>
+                                      </div>
+                                    </div>
+                                    <div class="location">Hà Nội (HAN)</div>
+                                    <div class="color-dark">Sân bay Nội Bài</div>
+                                  </div>
+                                </div>
+                                <div class="col-1">
+                                  <div class="arrow">✈</div>
+                                </div>
+                                <div class="col-5">
+                                  <div class="arrival">
+                                    <div class="row g-1">
+                                      <div class="col-5">
+                                        <div class="time">17:15</div>
+                                      </div>
+                                      <div class="col-7">
+                                        <div class="date  d-none-lg">
+                                          Thứ 5 <br />
+                                          05-04/22
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="location">
+                                      Tp. Hồ Chí Minh (SGN)
+                                    </div>
+                                    <div class="color-dark">Sân bay Nội Bài</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 d-none d-block-md col-md-6">
+                          <div class="airline-info">
+                            <img src="./img/home/image-log-bamboo.png" alt="logo">
+                            <div class="airline-name">
+                              <span class="color-dark name">VIETJET AIR</span>
+                              <span class="color-info code">VJ2051 - A320</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 col-lg-2 col-md-6">
+                          <div class="flight-meta">
+                            <div class="d-none-lg">
+                              <p class="color-info">Bay thẳng</p>
+                              <p class="color-dark">02h10m</p>
+                            </div>
+                            <div class="type-ticket">
+                              <p class="color-info d-none-md">Hạng vé</p>
+                              <p class="color-dark type">Eco1</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-ticket">
+                    <div class="heading-ticket">
+                      <div class="row row-cols-md-1">
+                        <div class="col-6">
+                          <p class="color-dark">Chiều đi: Hà Nội - Hồ Chí Minh</p>
+                        </div>
+                        <div class="col-6">
+                          <p class="color-dark">Ngày: 06/02/2023</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="body-ticket">
+                      <div class="row g-1">
+                        <div class="col-3 d-none-md">
+                          <div class="airline-info">
+                            <img src="./img/home/image-log-bamboo.png" alt="logo" />
+                            <div class="airline-name">
+                              <span class="color-dark name">VIETJET AIR</span>
+                              <span class="color-info code">VJ2051 - A320</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 col-lg-7 col-md-12">
+                          <div class="flight-details">
+                            <div class="time-info">
+                              <div class="row">
+                                <div class="col-5">
+                                  <div class="departure">
+                                    <div class="row g-1">
+                                      <div class="col-7">
+                                        <div class="date d-none-lg">
+                                          Thứ 5 <br />
+                                          05-04/22
+                                        </div>
+                                      </div>
+                                      <div class="col-5">
+                                        <div class="time">17:15</div>
+                                      </div>
+                                    </div>
+                                    <div class="location">Hà Nội (HAN)</div>
+                                    <div class="color-dark">Sân bay Nội Bài</div>
+                                  </div>
+                                </div>
+                                <div class="col-1">
+                                  <div class="arrow">✈</div>
+                                </div>
+                                <div class="col-5">
+                                  <div class="arrival">
+                                    <div class="row g-1">
+                                      <div class="col-5">
+                                        <div class="time">17:15</div>
+                                      </div>
+                                      <div class="col-7">
+                                        <div class="date  d-none-lg">
+                                          Thứ 5 <br />
+                                          05-04/22
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="location">
+                                      Tp. Hồ Chí Minh (SGN)
+                                    </div>
+                                    <div class="color-dark">Sân bay Nội Bài</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 d-none d-block-md col-md-6">
+                          <div class="airline-info">
+                            <img src="./img/home/image-log-bamboo.png" alt="logo">
+                            <div class="airline-name">
+                              <span class="color-dark name">VIETJET AIR</span>
+                              <span class="color-info code">VJ2051 - A320</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 col-lg-2 col-md-6">
+                          <div class="flight-meta">
+                            <div class="d-none-lg">
+                              <p class="color-info">Bay thẳng</p>
+                              <p class="color-dark">02h10m</p>
+                            </div>
+                            <div class="type-ticket">
+                              <p class="color-info d-none-md">Hạng vé</p>
+                              <p class="color-dark type">Eco1</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="baggage-infor">
+                <div class="heading">
+                  <div class="container">
+                    <h1 class="color-dark">LỰA CHỌN PHƯƠNG THỨC THANH TOÁN</h1>
+                    <p class="color-primary">
+                      Sau khi hoàn tất thanh toán, vé điện tử sẽ được gửi ngay qua SMS và Email của bạn.
+                    </p>
+                  </div>
+                </div>
+                <div class="box-container">
+
+                  <div class="bank">
+                    <div class="row row-cols-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-1">
+                      <div>
+                        <div class="card  color-dark">
+                          <div class="logo">
+                            <img src="./img/flight-payment/vietcombank.svg" alt="Vietcombank Logo">
+                          </div>
+                          <div class="account-info ">
+                            <p>Tên tài khoản:</p>
+                            <p class="name">Công ty cổ phần Vé máy bay số</p>
+                          </div>
+                          <div class="number-bank">
+                            <div class="account-info">
+                              <p>Số tài khoản:</p>
+                              <p class="account-number color-info">1035 396 886</p>
+                            </div>
+                            <div class="account-info">
+                              <p>Nội dung:</p>
+                              <p>CKVMBS-Mã Đơn hàng của bạn</p>
+                            </div>
+                          </div>
+                          <div class="footer">
+                            Ngân hàng TMCP Ngoại Thương Việt Nam Vietcombank<br>
+                            • Chi Nhánh Thành Công - Hà Nội
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="card  color-dark">
+                          <div class="logo">
+                            <img src="./img/flight-payment/mbbank.svg" alt="mbbank Logo">
+                          </div>
+                          <div class="account-info ">
+                            <p>Tên tài khoản:</p>
+                            <p class="name">Công ty cổ phần Vé máy bay số</p>
+                          </div>
+                          <div class="number-bank">
+                            <div class="account-info">
+                              <p>Số tài khoản:</p>
+                              <p class="account-number color-info">2468 886 886</p>
+                            </div>
+                            <div class="account-info">
+                              <p>Nội dung:</p>
+                              <p>CKVMBS-Mã Đơn hàng của bạn</p>
+                            </div>
+                          </div>
+                          <div class="footer">
+                            Ngân hàng TMCP Quân Đội<br>
+                            • Chi Nhánh Thăng Long - Hà Nội
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="card  color-dark">
+                          <div class="logo">
+                            <img src="./img/flight-payment/tpbank.svg" alt="tpbank Logo">
+                          </div>
+                          <div class="account-info ">
+                            <p>Tên tài khoản:</p>
+                            <p class="name">Công ty cổ phần Vé máy bay số</p>
+                          </div>
+                          <div class="number-bank">
+                            <div class="account-info">
+                              <p>Số tài khoản:</p>
+                              <p class="account-number color-info">5678 9886 886</p>
+                            </div>
+                            <div class="account-info">
+                              <p>Nội dung:</p>
+                              <p>CKVMBS-Mã Đơn hàng của bạn</p>
+                            </div>
+                          </div>
+                          <div class="footer">
+                            Ngân hàng TMCP Tiên Phong TPBank<br>
+                            • Chi Nhánh Thành Công - Hà Nội
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="card  color-dark">
+                          <div class="logo">
+                            <img src="./img/flight-payment/acbbank.svg" alt="acbbank Logo">
+                          </div>
+                          <div class="account-info ">
+                            <p>Tên tài khoản:</p>
+                            <p class="name">Công ty cổ phần Vé máy bay số</p>
+                          </div>
+                          <div class="number-bank">
+                            <div class="account-info">
+                              <p>Số tài khoản:</p>
+                              <p class="account-number color-info">2468 886 886</p>
+                            </div>
+                            <div class="account-info">
+                              <p>Nội dung:</p>
+                              <p>CKVMBS-Mã Đơn hàng của bạn</p>
+                            </div>
+                          </div>
+                          <div class="footer">
+                            Ngân hàng TMCP Á Châu ACB<br>
+                            • Chi Nhánh Thành Công - Hà Nội
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-3 col-xxl-12">
+              <div class="info-detail">
+                <div class="box">
+                  <div class="heading-box-info">
+                    <p class="color-dark">THÔNG TIN ĐẶT VÉ</p>
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 1L8 8L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="price-detail">
+                  <div class="price-total box">
+                    <p>Tổng tiền:</p>
+                    <p>1,219,820 VND</p>
+                  </div>
+                  <div class="price--detail__list box color-dark">
+                    <div class="price-item">
+                      <p>Trạng thái:</p>
+                      <div class="price">
+                        <p>Chờ xác nhận</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Điểm xuất phát:</p>
+                      <div>
+                        <p>Hà Nội</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Điểm đến:</p>
+                      <div>
+                        <p>Đà Lạt</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Loại vé:</p>
+                      <div>
+                        <p>Một chiều</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Hành khách:</p>
+                      <div>
+                        <p>2 Người lớn, 1 trẻ em, 1 trẻ sơ sinh</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Ngày đi:</p>
+                      <div>
+                        <p>05:35 <br>
+                          Thứ 2, 07/08/2023</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Hãng bay:</p>
+                      <div>
+                        <p style="display: flex; align-items: center; gap: 10px;">
+                          <img width="32" src="./img/home/image-log-bamboo.png" alt="logo"> VietjetAir
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="box btn-submit">
+                    <button class="btn btn-info" style="width: 100%;">CHI TIẾT ĐẶT VÉ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-4 col-lg-12">
+                        <div class="colums">
+                            <img src="./svg/footer/logoTicket.svg"
+                                alt="Logo Ticket">
+                            <p class="heading">MEMBER OF PROTECH GROUP</p>
+                            <p>The most prestigious ticket
+                                booking website in Vietnam ing website in Vietn</p>
+                            <hr>
+                            <div class="qr-code">
+                                <img src="./img/QR-code.png" alt>
+                                <img src="./img/QR-code.png" alt>
+                                <img src="./img/QR-code.png" alt>
+                                <img src="./img/QR-code.png" alt>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2  col-lg-6 col-md-12">
+                        <div class="colums">
+                            <p class="heading">About Us</p>
+                            <ul>
+                                <li><a href="#">Introduction</a></li>
+                                <li><a href="#">Customer reviews</a></li>
+                                <li><a href="#">Operational Regulations</a></li>
+                                <li><a href="#">Information privacy policy</a></li>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-2  col-lg-6 col-md-12">
+                        <div class="colums">
+                            <p class="heading">Tutorials & Help</p>
+                            <ul>
+                                <li><a href="#">Frequently asked questions</a></li>
+                                <li><a href="#">Ticket booking guide</a></li>
+                                <li><a href="#">Payment Guide</a></li>
+                                <li><a href="#">Review your order</a></li>
+                                <li><a href="#">Print e-tickets</a></li>
+                                <li><a href="#">Feedback about orders</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-12">
+                        <div class="colums">
+                            <div>
+                                <p class="heading">Hotline 24/7 : </p>
+                                <a class="number-phone" href="tel:+84919005320">09 1900
+                                    5320</a>
+                            </div>
+                            <p class="heading">PROSPERITY TOURISM AND TECHNOLOGY GROUP
+                                JOINT STOCK COMPANY</p>
+                            <p class="heading">No. 19 Alley 5, Do Nha Street, Tay Mo Ward,
+                                Nam Tu Liem District, Hanoi City, Vietnam</p>
+
+                            <form action>
+                                <input type="text" placeholder="Email">
+                                <button>Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>©2023 Pro Tech Group</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="#">www.vemaybayso.vn</a></li>
+                        <li><a href="#">www.tickit.vn</a></li>
+                        <li><a href="#">www.evoucher.vn</a></li>
+                        <li><a href="#">www.protravel.vn</a></li>
+                    </ul>
+                </div>
+                <div><ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul></div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- SCRIPT -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+          integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <script>
+          let a = 1
+          // open model
+          const modal = document.getElementById('modal')
+          const modal2 = document.getElementById('modal2')
+          const modal3 = document.getElementById('modal3')
+          // Mở modal
+          function openModal() {
+            modal.style.display = 'flex'
+          }
+          // Mở modal
+          let isArrCheck = []
+
+          function openModal2(numberChang, name) {
+            //numberChang: số chặng
+            // name : 1 : start hoặc 2: end
+            isArrCheck.push(numberChang)
+            isArrCheck.push(name)
+            modal2.style.display = 'flex'
+            const listItems = document.querySelectorAll('.list-items li')
+            listItems.forEach(li => {
+              li.style.display = 'list-item'
+            })
+          }
+
+          function checkRoute(elementClick, code) {
+            modal2.style.display = 'none'
+            const elements = document.querySelectorAll('.point-route')
+            elements.forEach(el => {
+              if (
+                isArrCheck[0] == el.getAttribute('data-position-box') &&
+                isArrCheck[1] == el.getAttribute('data-position-item')
+              ) {
+                el.textContent = elementClick.textContent
+                el.nextElementSibling.value = code
+              }
+            })
+            isArrCheck = []
+          }
+
+          function filterAirports() {
+            const input = document.getElementById('airportInput')
+            const filter = input.value.toLowerCase()
+            const listItems = document.querySelectorAll('.list-items li')
+            listItems.forEach(li => {
+              const text = li.textContent.toLowerCase()
+              if (text.includes(filter)) {
+                li.style.display = 'list-item'
+              } else {
+                li.style.display = 'none'
+              }
+            })
+          }
+
+          function filterAirports2() {
+            const input = document.getElementById('airportInput2')
+            const filter = input.value.toLowerCase() // chữ thường để so sánh không phân biệt hoa thường
+            const listItems = document.querySelectorAll('.list-items li')
+            listItems.forEach(li => {
+              const text = li.textContent.toLowerCase()
+              if (text.includes(filter)) {
+                li.style.display = 'list-item'
+              } else {
+                li.style.display = 'none'
+              }
+            })
+          }
+
+          // Đóng modal
+          for (let i = 1; i <= 3; i++) {
+            const minus = document.querySelector(`.minus${i}`)
+            const plus = document.querySelector(`.plus${i}`)
+            const count = document.querySelector(`.count${i}`)
+
+            const member = document.querySelector(`#member${i}`)
+            const memberModal = document.querySelector(`#memberModal${i}`)
+            minus.addEventListener('click', () => {
+              let value = parseInt(count.value) || 0
+              if (value > 0) {
+                count.value = value - 1
+                member.textContent = count.value
+                memberModal.textContent = count.value
+              }
+            })
+            plus.addEventListener('click', () => {
+              let value = parseInt(count.value) || 0
+              count.value = value + 1
+              member.textContent = count.value
+              memberModal.textContent = count.value
+            })
+          }
+          // Gán flatpickr cho tất cả input có class .calendar-input
+          function startFlatpickr() {
+            flatpickr('.calendar-input', {
+              dateFormat: 'd/m/Y',
+              minDate: 'today',
+              locale: 'vn'
+              // Bạn có thể thêm showMonths, range mode, v.v. nếu muốn
+            })
+          }
+          startFlatpickr()
+          const radiosSearch = document.querySelectorAll('.typeItinerary')
+          const iconOne = document.querySelector('.icon-one')
+          const iconTwo = document.querySelector('.icon-two')
+          const dateEnd = document.querySelector('.dateEnd')
+
+          function addNewRoute() {
+            // Xoá nút remove nếu có
+            const removeBtn = document.querySelector('.remove-route')
+            if (removeBtn) removeBtn.remove()
+
+            // Update UI
+            document.querySelector('.action-head')?.classList.remove('d-none')
+            document.querySelector('.route-first')?.classList.add('col-12')
+            document.querySelector('.box-submit-search')?.classList.add('col-12')
+
+            // Tạo container chứa các route nếu chưa có
+            let routeContainer = document.querySelector('.new-route')
+            if (!routeContainer) {
+              routeContainer = document.createElement('div')
+              routeContainer.className = 'new-route col-12'
+              // Chèn container vào DOM — ví dụ sau .route-first
+              const target = document.querySelector('.route-first')
+              target?.parentNode.insertBefore(routeContainer, target.nextSibling)
+            }
+
+            // Tạo item mới
+            const existingRoutes = document.querySelectorAll('.item-route')
+            const newRouteNumber = existingRoutes.length + 1
+
+            const routeItem = document.createElement('div')
+            routeItem.className = 'row col-12 col-xl-12 item-route'
+            routeItem.innerHTML = `
+     <div class="action-head col-12">
+      <h2>Chặng ${newRouteNumber}</h2>
+      <h2 class="btn-remove" onclick="removeRoute(event)"><i class="color-info fa-solid fa-trash remove-route"></i></h2>
+    </div>
+    <div class="row g-1 col-6 col-lg-12 route-point col-8">
+      <div class="col-6 col-lg-12" onclick="openModal2(${newRouteNumber},1)">
+        <div class="point-start point box">
+          <label class="row g-0">
+            <div class="col-xl-12">
+              <img src="./svg/search/plane.svg" alt="plane">
+              <span>Điểm đi</span>
+            </div>
+            <p id="start" data-position-box="${newRouteNumber}" data-position-item="1" class="col-xl-9 col-sm-12 point-route">
+              Chọn điểm đến
+            </p>
+            <input type="text" hidden name="chang${newRouteNumber}[diemDi]">
+          </label>
+        </div>
+      </div>
+      <div class="col-6 col-lg-12" onclick="openModal2(${newRouteNumber},2)">
+        <div class="point-end point box">
+          <label class="row g-0">
+            <div class="col-xl-12">
+              <img src="./svg/search/map.svg" alt="plane">
+              <span>Điểm đến</span>
+            </div>
+            <p data-position-box="${newRouteNumber}" data-position-item="2" class="col-xl-9 col-sm-12 point-route">
+              Chọn điểm đến
+            </p>
+            <input type="text" hidden name="chang${newRouteNumber}[diemDien]">
+          </label>
+        </div>
+      </div>
+      <div class="iconRound">
+        <img src="./svg/search/oneRound.svg" alt="iconRound" class="icon-one">
+        <img src="./svg/search/twoRound.svg" alt="iconRound" class="icon-two hidden">
+      </div>
+    </div>
+    <div class="row  g-1 col-lg-12 date-search col-4">
+      <div class="col-6 startDay col-12">
+        <div class="point-start point box">
+          <label class="row g-0">
+            <div class="col-12">
+              <img src="./svg/search/calender.svg" alt="plane">
+              <span>Ngày đi</span>
+            </div>
+            <input type="text" name="chang${newRouteNumber}[ngayDi]" class="calendar-input col-12 flatpickr-input" placeholder="dd/mm/yyyy" readonly>
+          </label>
+        </div>
+      </div>
+      <div class="col-6 dateEnd hidden">
+        <div class="point-end point box">
+          <label class="row g-0">
+            <div>
+              <img src="./svg/search/calender.svg" alt="plane">
+              <span>Ngày về</span>
+            </div>
+            <input name="chang${newRouteNumber}[ngayVe]" type="text" class="col-12 calendar-input flatpickr-input" placeholder="dd/mm/yyyy" readonly>
+          </label>
+        </div>
+      </div>
+    </div>
+  `
+
+            // Thêm vào container
+            routeContainer.appendChild(routeItem)
+
+            // Khởi tạo flatpickr
+            flatpickr(routeItem.querySelectorAll('.calendar-input'), {
+              dateFormat: 'd/m/Y',
+              minDate: 'today',
+              locale: 'vn'
+            })
+            // Tạo nút thêm chặng nếu chưa có
+            if (!document.querySelector('.createRoute')) {
+              const addButton = document.createElement('p')
+              addButton.classList.add('createRoute')
+              addButton.textContent = '+'
+              addButton.onclick = addNewRoute
+              routeContainer.parentNode.insertBefore(
+                addButton,
+                routeContainer.nextSibling
+              )
+            }
+            if (newRouteNumber === 6) {
+              document.querySelector('.createRoute').remove()
+            }
+            // Debug log
+            console.log('🔱 addNewRoute:', newRouteNumber)
+          }
+
+          function removeRoute(event) {
+            // Ngăn sự kiện nổi bọt nếu cần
+            event?.stopPropagation()
+            // Tìm phần tử cần xoá (cha chứa class item-route)
+            const routeItem = event.target.closest('.item-route')
+            if (routeItem) {
+              routeItem.remove()
+            }
+
+            const indexItemaddRemove =
+              document.querySelectorAll('.item-route').length - 1
+            if (indexItemaddRemove >= 2) {
+              const item = document
+                .querySelectorAll('.item-route')
+              [indexItemaddRemove].querySelector('.btn-remove')
+              const icon = document.createElement('i')
+              icon.className = 'color-info fa-solid fa-trash remove-route'
+              item.appendChild(icon)
+            }
+          }
+
+          function updateIcon() {
+            if (document.getElementById('roundtrip').checked) {
+              document.querySelector('.route-point').classList.remove('col-8')
+              document.querySelector('.date-search').classList.remove('col-4')
+              document.querySelector('.date-search').classList.add('col-6')
+              document.querySelector('.startDay').classList.remove('col-12')
+              iconOne.classList.add('hidden')
+              iconTwo.classList.remove('hidden')
+              dateEnd.classList.remove('hidden')
+            } else {
+              document.querySelector('.route-point').classList.add('col-8')
+              document.querySelector('.date-search').classList.remove('col-6')
+              document.querySelector('.date-search').classList.add('col-4')
+              document.querySelector('.startDay').classList.add('col-12')
+              iconOne.classList.remove('hidden')
+              iconTwo.classList.add('hidden')
+              dateEnd.classList.add('hidden')
+            }
+            // THÊM FORM
+            if (document.getElementById('multicity').checked) {
+              addNewRoute()
+              document.querySelector('.modal-form-search').id = 'modal-form-search'
+            } else {
+              document.querySelector('.modal-form-search').id = ''
+              if (document.querySelector('.createRoute')) {
+                document.querySelector('.createRoute').remove()
+              }
+              document.querySelector('.route-first').classList.remove('col-12')
+              document.querySelector('.action-head').classList.add('d-none')
+              if (document.querySelector('.new-route')) {
+                document.querySelector('.new-route').remove()
+              }
+              document
+                .querySelector('.box-submit-search')
+                .classList.remove('col-12')
+            }
+          }
+          radiosSearch.forEach(radio => {
+            radio.addEventListener('change', updateIcon)
+          })
+          window.addEventListener('DOMContentLoaded', updateIcon)
+          // MENU
+          const menuButton = document.querySelector('.openMenu')
+          const navigation = document.querySelector('.navigation')
+          // Mở/đóng menu
+          menuButton.addEventListener('click', function () {
+            navigation.classList.toggle('openMenu')
+            if (navigation.classList.contains('openMenu')) {
+              document.body.classList.add('no-scroll')
+            } else {
+              document.body.classList.remove('no-scroll')
+            }
+          })
+          // Click ra ngoài để đóng menu
+          document.addEventListener('click', function (event) {
+            if (
+              !navigation.contains(event.target) &&
+              !menuButton.contains(event.target)
+            ) {
+              navigation.classList.remove('openMenu')
+              document.body.classList.remove('no-scroll')
+            }
+          })
+          // Toggle submenu
+          document.addEventListener('click', e => {
+            if (e.target.classList.contains('toggle-submenu')) {
+              const nextUl = e.target.nextElementSibling
+              if (nextUl && nextUl.tagName === 'UL') {
+                nextUl.classList.toggle('open')
+              }
+            }
+          })
+          if (window.innerWidth < 1207) {
+            console.log(window.innerWidth)
+            document.querySelectorAll('li').forEach(li => {
+              const submenu = li.querySelector('.sub-menu')
+              if (submenu) {
+                const toggle = document.createElement('span')
+                toggle.classList.add('toggle-submenu')
+                toggle.textContent = '▼'
+                li.insertBefore(toggle, submenu)
+              }
+            })
+          }
+          // END MENU
+          // backToTop
+          document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById('backToTop')
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block'
+              } else {
+                backToTopBtn.style.display = 'none'
+              }
+            })
+            document.getElementById('backToTop').addEventListener('click', () => {
+              scrollToTop(1000) // Thời gian: 1000ms = 1 giây (bạn có thể tăng lên)
+            })
+
+            function scrollToTop(duration) {
+              const start = window.scrollY
+              const startTime = performance.now()
+
+              function animate(currentTime) {
+                const elapsed = currentTime - startTime
+                const progress = Math.min(elapsed / duration, 1) // [0..1]
+                const ease = 1 - Math.pow(1 - progress, 3) // ease-out cubic
+                window.scrollTo(0, start * (1 - ease))
+                if (elapsed < duration) {
+                  requestAnimationFrame(animate)
+                }
+              }
+              requestAnimationFrame(animate)
+            }
+          })
+        </script>
+</body>
+
+</html>
