@@ -6,7 +6,7 @@
   padding: 50px 0px;
 }
 
-.flight-info {
+.flight-payment {
   margin-bottom: 58px;
 
   .heading {
@@ -66,14 +66,16 @@
     .body-ticket {
       padding: 15px;
       background-color: #fff;
+
       @include mixins.screen(lg) {
-        .type-ticket{
+        .type-ticket {
           width: 100%;
         }
       }
+
       @include mixins.screen(md) {
-        .type-ticket{
-          .type{
+        .type-ticket {
+          .type {
             font-size: 1.4rem;
             color: #fff;
             background-color: variables.$info;
@@ -81,8 +83,8 @@
             width: fit-content;
             margin-left: auto;
             border-radius: 20px;
-          margin-top: auto;
-            box-shadow: 0 4px 16px 0 rgba(0,0,0,0.15);
+            margin-top: auto;
+            box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
           }
         }
       }
@@ -103,6 +105,7 @@
         width: 40px;
         height: 40px;
       }
+
       gap: 10px;
 
       text-align: start;
@@ -169,8 +172,43 @@
 
   section .box-container {
     padding: 22px;
-    box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+    background-color: #F7FFFF;
     border-radius: 10px;
+
+    .bank {
+      
+      .card {
+        margin-bottom: 15px;
+        padding: 0;
+       box-shadow: 1px 1px 12px 3px rgba(130, 130, 130, 0.25);
+        border-radius: 10px;
+        overflow: hidden;
+        p {
+          font-size: 1.2rem;
+        }
+        &>div{
+          padding:10px 20px;
+        }
+        .account-number {
+          font-size: 2.4rem;
+          text-align: start;
+          margin-bottom: 4px;
+        }
+        p.name {
+          font-size: 1.4rem;
+        }
+        .logo{
+          height: 105px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .footer{
+          min-height: 100px;
+          background-color: #FFF6F4;
+        }
+      }
+    }
   }
 
   .baggage-infor {
@@ -190,13 +228,14 @@
       padding: 12px 23px;
       border-radius: 10px;
     }
-  
+
 
     .info-container {
       align-items: center;
     }
+
     @include mixins.screen(md) {
-      .info-container>p{
+      .info-container>p {
         width: 100%;
       }
     }

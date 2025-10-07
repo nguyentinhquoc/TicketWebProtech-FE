@@ -18,19 +18,16 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 </head>
+
 <body>
   <!-- <img src="./../public/img/banner.png" alt /> -->
   <%- include("./partials/header.ejs") %> <%- include("./partials/nav.ejs") %>
-     
- 
-
-      <main class="flight-info">
+      <main class="flight-payment">
         <div class="heading">
           <div class="container">
-            <h1 class="color-dark">THÔNG TIN CHUYẾN BAY</h1>
+            <h1 class="color-dark">THÔNG TIN THANH TOÁN</h1>
             <p class="color-primary">
-              Giá vé chưa bao gồm thuế và các loại thuế khác, khách hàng lưu ý
-              chọn chi tiết để xem đầy đủ.
+              Quý khách vui lòng kiểm tra lại thông tin đặt vé và thanh toán đầy đủ.
             </p>
           </div>
         </div>
@@ -132,407 +129,224 @@
                       </div>
                     </div>
                   </div>
-                
+                  <div class="item-ticket">
+                    <div class="heading-ticket">
+                      <div class="row row-cols-md-1">
+                        <div class="col-6">
+                          <p class="color-dark">Chiều đi: Hà Nội - Hồ Chí Minh</p>
+                        </div>
+                        <div class="col-6">
+                          <p class="color-dark">Ngày: 06/02/2023</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="body-ticket">
+                      <div class="row g-1">
+                        <div class="col-3 d-none-md">
+                          <div class="airline-info">
+                            <img src="/img/home/image-log-bamboo.png" alt="logo" />
+                            <div class="airline-name">
+                              <span class="color-dark name">VIETJET AIR</span>
+                              <span class="color-info code">VJ2051 - A320</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 col-lg-7 col-md-12">
+                          <div class="flight-details">
+                            <div class="time-info">
+                              <div class="row">
+                                <div class="col-5">
+                                  <div class="departure">
+                                    <div class="row g-1">
+                                      <div class="col-7">
+                                        <div class="date d-none-lg">
+                                          Thứ 5 <br />
+                                          05-04/22
+                                        </div>
+                                      </div>
+                                      <div class="col-5">
+                                        <div class="time">17:15</div>
+                                      </div>
+                                    </div>
+                                    <div class="location">Hà Nội (HAN)</div>
+                                    <div class="color-dark">Sân bay Nội Bài</div>
+                                  </div>
+                                </div>
+                                <div class="col-1">
+                                  <div class="arrow">✈</div>
+                                </div>
+                                <div class="col-5">
+                                  <div class="arrival">
+                                    <div class="row g-1">
+                                      <div class="col-5">
+                                        <div class="time">17:15</div>
+                                      </div>
+                                      <div class="col-7">
+                                        <div class="date  d-none-lg">
+                                          Thứ 5 <br />
+                                          05-04/22
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="location">
+                                      Tp. Hồ Chí Minh (SGN)
+                                    </div>
+                                    <div class="color-dark">Sân bay Nội Bài</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 d-none d-block-md col-md-6">
+                          <div class="airline-info">
+                            <img src="/img/home/image-log-bamboo.png" alt="logo">
+                            <div class="airline-name">
+                              <span class="color-dark name">VIETJET AIR</span>
+                              <span class="color-info code">VJ2051 - A320</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 col-lg-2 col-md-6">
+                          <div class="flight-meta">
+                            <div class="d-none-lg">
+                              <p class="color-info">Bay thẳng</p>
+                              <p class="color-dark">02h10m</p>
+                            </div>
+                            <div class="type-ticket">
+                              <p class="color-info d-none-md">Hạng vé</p>
+                              <p class="color-dark type">Eco1</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
               <section class="baggage-infor">
                 <div class="heading">
                   <div class="container">
-                    <h1 class="color-dark">THÔNG TIN HÀNH LÝ</h1>
+                    <h1 class="color-dark">LỰA CHỌN PHƯƠNG THỨC THANH TOÁN</h1>
                     <p class="color-primary">
-                      Mỗi hành khách được mang theo tối đa 7kg hành lý xách tay,
-                      0Kg hành lý ký gửi.
+                      Sau khi hoàn tất thanh toán, vé điện tử sẽ được gửi ngay qua SMS và Email của bạn.
                     </p>
                   </div>
                 </div>
                 <div class="box-container">
-                  <div class="row">
-                    <div class="col-6 col-md-12">
-                      <div class="row g-2">
-                        <div class="col-12 heading-info-baggage">
-                          <p class="color-info ">Hành lý ký gửi chiều đi:</p>
-                        </div>
-                        <div class="col-12">
-                          <div class="row info-container">
-                            <p class="color-dark info-user">HÀNH KHÁCH 1:</p>
-                            <p class="box-info color-dark">
-                              Không mua thêm hành lý ký gửi
-                              <br />
-                              0 VND
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="row info-container">
-                            <p class="color-dark info-user">HÀNH KHÁCH 1:</p>
-                            <p class="box-info color-dark">
-                              Không mua thêm hành lý ký gửi
-                              <br />
-                              0 VND
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="row info-container">
-                            <p class="color-dark info-user">HÀNH KHÁCH 1:</p>
-                            <p class="box-info color-dark">
-                              Không mua thêm hành lý ký gửi
-                              <br />
-                              0 VND
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-md-12">
-                      <div class="row g-2">
-                        <div class="col-12 heading-info-baggage">
-                          <p class="color-info ">Hành lý ký gửi chiều đi:</p>
-                        </div>
-                        <div class="col-12">
-                          <div class="row info-container">
-                            <p class="color-dark info-user">HÀNH KHÁCH 1:</p>
-                            <p class="box-info color-dark">
-                              Không mua thêm hành lý ký gửi
-                              <br />
-                              0 VND
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="row info-container">
-                            <p class="color-dark info-user">HÀNH KHÁCH 1:</p>
-                            <p class="box-info color-dark">
-                              Không mua thêm hành lý ký gửi
-                              <br />
-                              0 VND
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="row info-container">
-                            <p class="color-dark info-user">HÀNH KHÁCH 1:</p>
-                            <p class="box-info color-dark">
-                              Không mua thêm hành lý ký gửi
-                              <br />
-                              0 VND
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="passenger-infor">
-                <div class="heading">
-                  <div class="container">
-                    <h1 class="color-dark">THÔNG TIN HÀNH KHÁCH</h1>
-                    <p class="color-primary">
-                      Người lớn Từ đủ 12 tuổi trở lên, Trẻ em từ đủ 2 tuổi đến
-                      dưới 12 tuổi, Em bé dưới 02 tuổi.
-                    </p>
-                  </div>
-                </div>
-                <div class="note">
-                  <h3 class="color-info">
-                    Lưu ý! Kiểm tra thông tin cá nhân của bạn
-                  </h3>
-                  <p class="color-dark">
-                    Do các quy định của hãng hàng không, điều quan trọng là tên
-                    của hành khách đi máy bay được nhập vào ô họ tên và ngày tháng
-                    năm sinh đối với trẻ em, em bé phải trùng với giấy tờ tùy thân
-                    đảm bảo lên máy bay. Hãng có thể từ chối và giá trị của vé bị
-                    mất nếu nhập sai. Rất tiếc, chúng tôi không thể hỗ trợ bạn sửa
-                    tên sau khi đặt vé được xác nhận.
-                  </p>
-                </div>
-                <div class="box-container">
-                  <div class="row g-2">
-                    <div class="col-12">
-                      <div class="row">
-                        <div class="col-10">
-                          <div class="d-flex checkbox-custom">
-                            <label class="color-dark check-box-red-wrapper">
-                              <input type="checkbox" />
-                              <div class="check-box-red"></div>
-                            </label>
-                            <p class="color-dark">
-                              Sử dụng thông tin hành khách là thông tin liên hệ
-                            </p>
-                          </div>
-                        </div>
-                        <div class>
-                          <p class="color-info">(*) Thông tin bắt buộc</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-2">
-                      <p class="info-passenger color-dark">NGƯỜI LỚN:</p>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <select name id>
-                          <option value>Ông</option>
-                          <option value>Bà</option>
-                        </select>
-                        <label>
-                          <p class="color-primary">
-                            Quý danh: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: Nguyen Van A" />
-                        <label>
-                          <p class="color-primary">
-                            Họ Tên đệm Tên: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: 01/07/1969" />
-                        <label>
-                          <p class="color-primary">Ngày sinh</p>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- <+====================WAVEBEAR====================+> -->
-                    <div class="col-2">
-                      <p class="info-passenger color-dark">TRẺ EM:</p>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <select name id>
-                          <option value>Ông</option>
-                          <option value>Bà</option>
-                        </select>
-                        <label>
-                          <p class="color-primary">
-                            Quý danh: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: Nguyen Van A" />
-                        <label>
-                          <p class="color-primary">
-                            Họ Tên đệm Tên:
-                            <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: 01/07/1969" />
-                        <label>
-                          <p class="color-primary">Ngày sinh</p>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- <+====================WAVEBEAR====================+> -->
-                    <div class="col-2">
-                      <p class="info-passenger color-dark">EM BÉ:</p>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <select name id>
-                          <option value>Ông</option>
-                          <option value>Bà</option>
-                        </select>
-                        <label>
-                          <p class="color-primary">
-                            Quý danh: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: Nguyen Van A" />
-                        <label>
-                          <p class="color-primary">
-                            Họ Tên đệm Tên: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: 01/07/1969" />
-                        <label>
-                          <p class="color-primary">Ngày sinh</p>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="contact-information">
-                <div class="heading">
-                  <div class="container">
-                    <h1 class="color-dark">THÔNG TIN LIÊN HỆ</h1>
-                    <p class="color-primary">
-                      Xin vui lòng điền vào tất cả các thông tin. Hãng sẽ liên hệ
-                      đến bạn nếu có thay đổi liên quan đến chuyến bay.
-                    </p>
-                  </div>
-                </div>
-                <div class="box-container">
-                  <div class="row g-2">
-                    <div class="col-12">
-                      <div class="row">
-                        <div class="col-10">
-                          <div class="d-flex checkbox-custom
-">
-                            <label class="color-dark check-box-red-wrapper" id="check123" data-id="check123">
-                              <input type="checkbox" />
-                              <div class="check-box-red"></div>
-                            </label>
-                            <p class="color-dark">Có lấy hóa đơn GTGT</p>
-                          </div>
-                        </div>
-                        <div class>
-                          <p class="color-info">(*) Thông tin bắt buộc</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-2">
-                      <p class="info-passenger color-dark">NGƯỜI LỚN:</p>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: Nguyen Van A" />
-                        <label>
-                          <p class="color-primary">
-                            Họ Tên đệm Tên: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <select name id>
-                          <option value>Ông</option>
-                          <option value>Bà</option>
-                        </select>
-                        <label>
-                          <p class="color-primary">
-                            Quý danh: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3"></div>
-                    <div class="col-2"></div>
-                    <!-- <+====================WAVEBEAR====================+> -->
-                    <div class="col-4">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: hello@vemaybayso.vn" />
-                        <label>
-                          <p class="color-primary">
-                            Email: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: 0919005320" />
-                        <label>
-                          <p class="color-primary">
-                            Điện thoại: <span class="color-info">(*)</span>
-                          </p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: 0919005320" />
-                        <label>
-                          <p class="color-primary">Điện thoại:</p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-2"></div>
-                    <div class="col-4">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: Số 81 Hoàng Cầu" />
-                        <label>
-                          <p class="color-primary">Địa chỉ:</p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: Số 81 Hoàng Cầu" />
-                        <label>
-                          <p class="color-primary">Thành phố:</p>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- <+====================WAVEBEAR====================+> -->
-                    <div class="col-2">
-                      <p class="info-passenger color-dark">HÓA ĐƠN:</p>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Đúng theo Đăng ký kinh doanh/Quyết định lập" />
-                        <label>
-                          <p class="color-primary">Địa chỉ</p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <input type="text" placeholder="Ví dụ: 0011005xxx" />
-                        <label>
-                          <p class="color-primary">Mã số Thuế:</p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="form-custom">
-                        <select name="" id="">
-                          <option value="">Cá nhân</option>
-                          <option value="">Doanh nghiệp</option>
-                        </select>
-                        <label>
-                          <p class="color-primary">Mục đích:</p>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-2">
-                      <p class="info-passenger color-dark">YÊU CẦU KHÁC:</p>
-                    </div>
-                    <div class="col-10">
-                      <div class="form-custom">
-                        <textarea style="min-height: 150px" class="input-multi-line"
-                          placeholder="Nhập nội dung..."></textarea>
 
-                        <label>
-                          <p class="color-primary">
-                            Bổ sung các thông tin cần hỗ trợ:
-                          </p>
-                        </label>
+                  <div class="bank">
+                    <div class="row row-cols-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-1">
+                      <div>
+                        <div class="card  color-dark">
+                          <div class="logo">
+                            <img src="/img/flight-payment/vietcombank.svg" alt="Vietcombank Logo">
+                          </div>
+                          <div class="account-info ">
+                            <p>Tên tài khoản:</p>
+                            <p class="name">Công ty cổ phần Vé máy bay số</p>
+                          </div>
+                          <div class="number-bank">
+                            <div class="account-info">
+                              <p>Số tài khoản:</p>
+                              <p class="account-number color-info">1035 396 886</p>
+                            </div>
+                            <div class="account-info">
+                              <p>Nội dung:</p>
+                              <p>CKVMBS-Mã Đơn hàng của bạn</p>
+                            </div>
+                          </div>
+                          <div class="footer">
+                            Ngân hàng TMCP Ngoại Thương Việt Nam Vietcombank<br>
+                            • Chi Nhánh Thành Công - Hà Nội
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="card  color-dark">
+                          <div class="logo">
+                            <img src="/img/flight-payment/mbbank.svg" alt="mbbank Logo">
+                          </div>
+                          <div class="account-info ">
+                            <p>Tên tài khoản:</p>
+                            <p class="name">Công ty cổ phần Vé máy bay số</p>
+                          </div>
+                          <div class="number-bank">
+                            <div class="account-info">
+                              <p>Số tài khoản:</p>
+                              <p class="account-number color-info">2468 886 886</p>
+                            </div>
+                            <div class="account-info">
+                              <p>Nội dung:</p>
+                              <p>CKVMBS-Mã Đơn hàng của bạn</p>
+                            </div>
+                          </div>
+                          <div class="footer">
+                            Ngân hàng TMCP Quân Đội<br>
+                            • Chi Nhánh Thăng Long - Hà Nội
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="card  color-dark">
+                          <div class="logo">
+                            <img src="/img/flight-payment/tpbank.svg" alt="tpbank Logo">
+                          </div>
+                          <div class="account-info ">
+                            <p>Tên tài khoản:</p>
+                            <p class="name">Công ty cổ phần Vé máy bay số</p>
+                          </div>
+                          <div class="number-bank">
+                            <div class="account-info">
+                              <p>Số tài khoản:</p>
+                              <p class="account-number color-info">5678 9886 886</p>
+                            </div>
+                            <div class="account-info">
+                              <p>Nội dung:</p>
+                              <p>CKVMBS-Mã Đơn hàng của bạn</p>
+                            </div>
+                          </div>
+                          <div class="footer">
+                            Ngân hàng TMCP Tiên Phong TPBank<br>
+                            • Chi Nhánh Thành Công - Hà Nội
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="card  color-dark">
+                          <div class="logo">
+                            <img src="/img/flight-payment/acbbank.svg" alt="acbbank Logo">
+                          </div>
+                          <div class="account-info ">
+                            <p>Tên tài khoản:</p>
+                            <p class="name">Công ty cổ phần Vé máy bay số</p>
+                          </div>
+                          <div class="number-bank">
+                            <div class="account-info">
+                              <p>Số tài khoản:</p>
+                              <p class="account-number color-info">2468 886 886</p>
+                            </div>
+                            <div class="account-info">
+                              <p>Nội dung:</p>
+                              <p>CKVMBS-Mã Đơn hàng của bạn</p>
+                            </div>
+                          </div>
+                          <div class="footer">
+                            Ngân hàng TMCP Á Châu ACB<br>
+                            • Chi Nhánh Thành Công - Hà Nội
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </section>
             </div>
             <div class="col-3 col-xxl-12">
               <div class="info-detail">
                 <div class="box">
                   <div class="heading-box-info">
-                    <p class="color-dark">CHI TIẾT GIÁ</p>
+                    <p class="color-dark">THÔNG TIN ĐẶT VÉ</p>
                     <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 1L8 8L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round" />
@@ -540,126 +354,60 @@
                   </div>
                 </div>
                 <div class="price-detail">
-                  <div class="price--detail__heading box">
-                    <p class="color-dark">Chuyến đi</p>
-                    <p class="color-info">604,920 VND</p>
-                  </div>
-                  <div class="price--detail__list box color-dark">
-                    <div class="price-item">
-                      <p>Giá vé</p>
-                      <div class="price">
-                        <p>20,520 <br />VND</p>
-                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 1L4.5 4.5L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="price-item">
-                      <p>Phí, thuế</p>
-                      <div class="price">
-                        <p>20,520 <br />VND</p>
-                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 1L4.5 4.5L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="price-item">
-                      <p>Dịch vụ</p>
-                      <div class="price">
-                        <p>20,520 <br />VND</p>
-                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 1L4.5 4.5L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="price-item">
-                      <p>Dịch vụ bổ trợ</p>
-                      <div class="price">
-                        <p>20,520 <br />VND</p>
-                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 1L4.5 4.5L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="price--detail__heading box">
-                    <p class="color-dark">Chuyến đi</p>
-                    <p class="color-info">604,920 VND</p>
-                  </div>
-                  <div class="price--detail__list box color-dark">
-                    <div class="price-item">
-                      <p>Giá vé</p>
-                      <div class="price">
-                        <p>20,520 <br />VND</p>
-                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 1L4.5 4.5L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="price-item">
-                      <p>Phí, thuế</p>
-                      <div class="price">
-                        <p>20,520 <br />VND</p>
-                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 1L4.5 4.5L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="price-item">
-                      <p>Dịch vụ</p>
-                      <div class="price">
-                        <p>20,520 <br />VND</p>
-                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 1L4.5 4.5L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="price-item">
-                      <p>Dịch vụ bổ trợ</p>
-                      <div class="price">
-                        <p>20,520 <br />VND</p>
-                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 1L4.5 4.5L1 1" stroke="#0A7C79" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
                   <div class="price-total box">
                     <p>Tổng tiền:</p>
                     <p>1,219,820 VND</p>
                   </div>
-                  <div class="input-discound box">
-                    <div class="form-custom">
-                      <input type="text" placeholder="Ví dụ: VMBS001S6
-" />
-                      <label>
-                        <p class="color-primary">Mã giảm giá</p>
-                      </label>
+                  <div class="price--detail__list box color-dark">
+                    <div class="price-item">
+                      <p>Trạng thái:</p>
+                      <div class="price">
+                        <p>Chờ xác nhận</p>
+                      </div>
                     </div>
+                    <div class="price-item">
+                      <p>Điểm xuất phát:</p>
+                      <div>
+                        <p>Hà Nội</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Điểm đến:</p>
+                      <div>
+                        <p>Đà Lạt</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Loại vé:</p>
+                      <div>
+                        <p>Một chiều</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Hành khách:</p>
+                      <div>
+                        <p>2 Người lớn, 1 trẻ em, 1 trẻ sơ sinh</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Ngày đi:</p>
+                      <div>
+                        <p>05:35 <br>
+                          Thứ 2, 07/08/2023</p>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <p>Hãng bay:</p>
+                      <div>
+                        <p style="display: flex; align-items: center; gap: 10px;">
+                          <img width="32" src="/img/home/image-log-bamboo.png" alt="logo"> VietjetAir
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                  </div>
-                  <div class="box clause">
-                    <div class="d-flex checkbox-custom">
-                        <label class="color-dark check-box-red-wrapper" >
-                          <input type="checkbox">
-                          <div class="check-box-red"></div>
-                        </label>
-                      <span class="color-dark">
-                        Tôi đã đọc, hiểu và đồng ý với các điều khoản của hãng hàng không, các thông tin
-                        đặt vé đã chính xác và tôi không có thắc mắc gì.
-                      </span>
-                    </div>
-                  </div>
                   <div class="box btn-submit">
-                    <button class="btn btn-info">THANH TOÁN</button>
+                    <button class="btn btn-info" style="width: 100%;">CHI TIẾT ĐẶT VÉ</button>
                   </div>
                 </div>
               </div>
